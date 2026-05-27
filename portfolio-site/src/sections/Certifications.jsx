@@ -53,7 +53,7 @@ export default function Certifications() {
             onClick={() => setSelected(cert)}
             className="glass rounded-xl p-5 flex flex-col items-center gap-3 cursor-pointer group border border-[#57CC99]/10 hover:border-[#57CC99]/30 transition-all duration-300 text-center"
           >
-            <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors overflow-hidden">
+            <div className="w-14 h-14 rounded-xl bg-white/90 flex items-center justify-center group-hover:bg-white transition-colors overflow-hidden">
               <img
                 src={`/certificates/${cert.logo}`}
                 alt={cert.org}

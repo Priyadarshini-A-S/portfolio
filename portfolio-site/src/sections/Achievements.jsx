@@ -32,7 +32,9 @@ function AchievModal({ item, onClose }) {
           )}
           <div className="flex items-center gap-3 mb-3">
             {item.logo && (
-              <img src={`/certificates/${item.logo}`} alt="" className="w-10 h-10 object-contain" onError={e => { e.target.style.display = 'none' }} />
+              <div className="w-12 h-12 rounded-lg bg-white/90 flex items-center justify-center shrink-0 overflow-hidden">
+                <img src={`/certificates/${item.logo}`} alt="" className="w-9 h-9 object-contain" onError={e => { e.target.style.display = 'none' }} />
+              </div>
             )}
             <div>
               <p className="text-white font-bold">{item.title}</p>
@@ -75,7 +77,7 @@ export default function Achievements() {
               className={`glass rounded-2xl p-6 border border-[#57CC99]/10 hover:border-[#57CC99]/25 transition-all duration-300 ${isLang || item.file ? 'cursor-pointer' : ''}`}
             >
               <div className="flex items-start gap-4">
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${isLang ? 'bg-[#38A3A5]/15' : 'bg-[#57CC99]/15'}`}>
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 overflow-hidden ${item.logo ? 'bg-white/90' : isLang ? 'bg-[#38A3A5]/15' : 'bg-[#57CC99]/15'}`}>
                   {item.logo
                     ? <img src={`/certificates/${item.logo}`} alt="" className="w-7 h-7 object-contain" onError={e => { e.target.style.display = 'none' }} />
                     : isLang ? <Languages size={18} className="text-[#38A3A5]" /> : <Trophy size={18} className="text-[#57CC99]" />
